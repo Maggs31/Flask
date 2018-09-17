@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Create new user{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+  <form method="post">
+    <label for="username">Username</label>
+    <input name="username" id="username" placeholder = "Enter name" required>
+    <label for="age">Age</label>
+    <input name="age" id="age" type="number" min="1" max="100" placeholder = "Enter a valid age" required>
+    <label for="occupation">Occupation</label>
+    <input name="occupation" id="occupation" placeholder = "Enter an occupation" required>
+    <label for="place">Place</label>
+    <input name="place" id="place" placeholder = "Enter location" required>
+    <label for="projects">Projects</label>
+    <input type="projects" name="projects" id="projects" placeholder="Comma seperated project names"required>
+    <input type="submit" value="Create">
+  </form>
+{% endblock %}

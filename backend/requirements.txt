@@ -1,0 +1,15 @@
+Flask==1.0.2
+Flask-Cors==3.0.3
+flask-mongoengine==0.9.3
+Flask-PyMongo==0.5.1
+Flask-RESTful==0.3.6
+Flask-Script==2.0.5
+Flask-SocketIO==2.9.0
+gevent==1.2.2
+gevent-websocket==0.10.1
+greenlet==0.4.12
+gunicorn==19.7.1
+mongoengine==0.13.0
+python-socketio==1.7.6
+bs4
+requests

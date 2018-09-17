@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Edit User details{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+  <form method="post">
+    <label for="username">Username</label>
+    <input name="username" id="username" value="{{ request.form['username'] or user['name'] }}" placeholder = "Enter name"required>
+    <label for="age">Age</label>
+    <input name="age" id="age" value="{{ request.form['age'] or user['age'] }}" placeholder = "Enter a valid age" required>
+    <label for="occupation">Occupation</label>
+    <input name="occupation" id="occupation" value="{{ request.form['occupation'] or user['occupation'] }}" placeholder = "Enter an occupation" required>
+    <label for="place">Place</label>
+    <input name="place" id="place" value="{{ request.form['place'] or user['place'] }}" placeholder = "Enter location" required>
+    <label for="projects">Projects</label>
+    {% set a = user['projects']|join(','|safe) %}
+    <input type="projects" name="projects" id="projects" value="{{ request.form['projects'] or a }}" placeholder="Comma seperated project names" required>
+    <input type="submit" value="Update">
+  </form>
+  <hr>
+
+{% endblock %}
