@@ -1,5 +1,5 @@
 import os
-from flask import Flask,send_file, render_template
+from flask import Flask, send_file, render_template
 from app.config import CONFIGURATIONS
 import app as app_root
 import time

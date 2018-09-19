@@ -122,3 +122,23 @@ a { color: #377ba8; }
 .content form { margin: 1em 0; display: flex;flex-direction: column;}
 .content label { font-weight: bold; margin-bottom: 0.5em; }
 .content input, .content textarea { margin-bottom: 1em;}
+.submitbutton { background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 4px;
+    font-size: 16px;
+    height:50px;
+    width:110px;
+    margin: auto;
+}
+
+.formele {
+	border-radius: 8px;
+	border: 2px solid #377ba8;
+	width: 90%;
+	padding: 15px 25px;
+}
