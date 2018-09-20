@@ -1,5 +1,3 @@
-Flask app:
-#-------------------------------------------------------------------------------------------------------------#
 a)Clone the project
 
 b) cd backend (from the terminal)
@@ -14,10 +12,10 @@ e) To view application page:
  
 http://localhost:8090/
 
-#-------------------------------------------------------------------------------------------------------------#
+The app folder inside backend contains the application logic. Models,Views,Static,Templates has the db schema, python logic, html template logic and css files respectively.
+Views contains the two blueprints used in the code.
 
-Project Structure - -- overview & important files
-#----------------#
+Structure
 
 Flask(git repository)
 |-backend
@@ -32,4 +30,4 @@ Flask(git repository)
 |-------extensions loads extensions required
 |-------factory (registers all handlers)
 
-#-------------------------------------------------------------------------------------------------------------#
+
