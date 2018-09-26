@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container">
+        <div class="table-wrapper">
+            <div class="table-title">
+                <div class="row">
+                    <div class="col-sm-12">
+                      <h2><b>User Details</b></h2>
+                    </div>
+                </div>
+            </div>
+          <div>
+            <table class="table table-striped table-hover">
+
+                <tbody>
+                <br>
+                <div class="row" style="background-color:#435d7d;text-align:left">
+                    <div class="col-sm-6">
+                      <h2></h2>
+                    </div>
+                    <div class="col-sm-6">
+                      <h2></h2>
+                    </div>
+                </div>
+                <div class="row" style="background-color:#435d7d;text-align:left">
+                    <div class="col-sm-6">
+                      <h2>User Name</h2>
+                    </div>
+                    <div class="col-sm-6">
+                      <h2>{{user.name}}</h2>
+                    </div>
+                </div><br>
+                <div class="row" style="background-color:#435d7d;text-align:left">
+                <div class="col-sm-6">
+                  <h2>Email</h2>
+                </div>
+                    <div class="col-sm-6">
+                  <h2>{{user.email}}</h2>
+                </div></div> <br>
+                <div class="row" style="background-color:#435d7d;text-align:left">
+                <div class="col-sm-6">
+                  <h2>Age</h2>
+                </div>
+                <div class="col-sm-6">
+                    <h2>{{user.age}}</h2>
+                </div></div><br>
+                <div class="row" style="background-color:#435d7d;text-align:left">
+                <div class="col-sm-6">
+                  <h2>Place</h2>
+                </div>
+                <div class="col-sm-6">
+                  <h2>{{user.place}}</h2>
+                </div></div><br>
+                <div class="row" style="background-color:#435d7d;text-align:left">
+                <div class="col-sm-6">
+                  <h2>Occupation</h2>
+                </div>
+                    <div class="col-sm-6">
+                  <h2>{{user.occupation}}</h2>
+                </div></div><br>
+                <div class="row" style="background-color:#435d7d;text-align:left">
+                <div class="col-sm-12">
+                  <h2>Projects :</h2>
+                </div></div>
+                {%for i in projects%}
+                <div class="row" style="background-color:#435d7d;text-align:left">
+                    {%if i.name%}
+                    <div class="col-sm-12" style="text-align:center;">
+                        <h2>{{i.name}} <span>:  {{i.description}} <span></h2>
+                    </div>
+                    {%endif%}
+                    </div>
+                {% else %}
+                <div class="row" style="background-color:#435d7d;text-align:left">
+                    <div class="col-sm-12">
+                        <h2>No assigned projects.</h2>
+                    </div>
+                    </div>
+                {%endfor%}
+                <br>
+                </tbody>
+            </table>
+          </div>
+        </div>
+    </div>
+{% endblock content%}
+

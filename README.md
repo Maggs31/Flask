@@ -25,7 +25,7 @@ Flask(git repository)
 |-------models (contains Mongodb schema)
 |-------views (contains python logic for CRUD )
 |-------static (contains style.css for the project )
-|-------templates (contains html files for UserList Page, CreateUser page, updateuser and deleteuser page) 
+|-------templates (contains html files for Projects, UserList Page, CreateUser page, updateuser and deleteuser page) 
 |-------config contains flask configuration
 |-------extensions loads extensions required
 |-------factory (registers all handlers)
