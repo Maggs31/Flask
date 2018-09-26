@@ -1,28 +1,113 @@
 {% extends 'base.html' %}
-
-{% block header %}
-  <h1>{% block title %}Create new user{% endblock %}</h1>
-{% endblock %}
-
 {% block content %}
 
-  <form method="post">
-    
-    <label for="username">Username</label>
-    <input name="username" id="username" class = "formele" placeholder = "Enter name" required>
-    
-    <label for="age">Age</label>
-    <input name="age" id="age" type="number" class = "formele" min="1" max="100" placeholder = "Enter a valid age" required>
-    
-    <label for="occupation">Occupation</label>
-    <input name="occupation" id="occupation" class = "formele" placeholder = "Enter an occupation" required>
-    
-    <label for="place">Place</label>
-    <input name="place" id="place" class = "formele" placeholder = "Enter location" required>
-    
-    <label for="projects">Projects</label>
-    <input type="projects" name="projects" class = "formele" id="projects" placeholder="Comma seperated project names"required>
-    
-    <input type="submit" class = "submitbutton" value="Create">
-  </form>
-{% endblock %}
+    <div class="content-section">
+        <form method="POST" action="">
+            {{ form.hidden_tag() }}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4" style="color:#435d7d;"><b>{{legend}}<b></legend>
+                <div class="form-group">
+                    {{ form.username.label(class="form-control-label") }}
+                    {% if form.username.errors %}
+                        {{ form.username(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.username.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.username(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                <div class="form-group">
+                    {{ form.email.label(class="form-control-label") }}
+                    {% if form.email.errors %}
+                        {{ form.email(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.email.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.email(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                <div class="form-group">
+                    {{ form.age.label(class="form-control-label") }}
+                    {% if form.age.errors %}
+                        {{ form.age(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.age.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.age(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                <div class="form-group">
+                    {{ form.occupation.label(class="form-control-label") }}
+                    {% if form.occupation.errors %}
+                        {{ form.occupation(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.occupation.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.occupation(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                <div class="form-group">
+                    {{ form.place.label(class="form-control-label") }}
+                    {% if form.place.errors %}
+                        {{ form.place(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.place.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.place(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                <div class="form-group">
+                    {{ form.projects.label(class="form-control-label") }}
+                    {% if form.projects.errors %}
+                        {{ form.projects(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.projects.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.projects(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+            </fieldset>
+        <div class="form-group">{{operation}}
+            <div>{{ form.submit(class="btn btn-outline-success btn-lg" ) }}</div>
+        </div>
+        </form>
+    </div>
+
+  <!--<form method="post">-->
+
+    <!--<label for="username">Username</label>-->
+    <!--<input name="username" id="username" class = "formele" placeholder = "Enter name" required>-->
+
+    <!--<label for="age">Age</label>-->
+    <!--<input name="age" id="age" type="number" class = "formele" min="1" max="100" placeholder = "Enter a valid age" required>-->
+
+    <!--<label for="occupation">Occupation</label>-->
+    <!--<input name="occupation" id="occupation" class = "formele" placeholder = "Enter an occupation" required>-->
+
+    <!--<label for="place">Place</label>-->
+    <!--<input name="place" id="place" class = "formele" placeholder = "Enter location" required>-->
+
+    <!--<label for="projects">Assign Projects</label>-->
+    <!--<input type="projects" name="projects" class = "formele" id="projects" placeholder="Comma seperated project names">-->
+
+    <!--<input type="submit" class = "submitbutton" value="Create">-->
+  <!--</form>-->
+{% endblock content %}
