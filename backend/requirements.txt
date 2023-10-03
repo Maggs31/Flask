@@ -5,7 +5,7 @@ Flask-PyMongo==0.5.1
 Flask-RESTful==0.3.6
 Flask-Script==2.0.5
 Flask-SocketIO==2.9.0
-gevent==1.2.2
+gevent==23.9.0
 gevent-websocket==0.10.1
 greenlet==0.4.12
 gunicorn==19.7.1
